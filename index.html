@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Todo-Application</title>
+</head>
+
+<body>
+    <h1>Todos</h1>
+    <input id="search-text" type="text" placeholder="Filter todos">
+    <label>
+        <input type="checkbox" id="hide-completed"> Hide completed
+    </label>
+    <div id="todos"></div>
+    <form id="new-todo">
+        <input type="text" placeholder="Something to do" name="text" autocomplete="off">
+        <button>Add Todo</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="todo-function.js"></script>
+    <script src="todo.js"></script>
+</body>
+
+</html>
