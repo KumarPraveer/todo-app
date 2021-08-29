@@ -18,15 +18,17 @@ searchText.addEventListener("input", function (e) {
 });
 
 formName.addEventListener("submit", function (e) {
-  e.preventDefault();
-  todos.push({
-    id: uuidv4(),
-    text: e.target.elements.text.value,
-    completed: false,
-  });
-  saveTodo(todos);
-  e.target.elements.text.value = "";
-  renderTodo(todos, filters);
+  if (e.target.elements.text.value !== "") {
+    e.preventDefault();
+    todos.push({
+      id: uuidv4(),
+      text: e.target.elements.text.value,
+      completed: false,
+    });
+    saveTodo(todos);
+    e.target.elements.text.value = "";
+    renderTodo(todos, filters);
+  }
 });
 
 hideCompleted.addEventListener("change", function (e) {
